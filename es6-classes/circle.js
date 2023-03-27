@@ -2,14 +2,12 @@
 /* exported Circle */
 class Circle extends Shape {
   constructor(radius) {
-    super();
+    super(Math.PI * radius * radius, 2 * Math.PI * radius);
     this.radius = radius;
-    this.area = radius * Math.PI;
-    this.circumference = 2 * radius * Math.PI;
   }
 
   print() {
-    return 'The area is ' + this.area + '. ' + 'The circumference is ' + this.circumference + '. ' + 'The radius is ' + this.radius + '.';
+    return super.print() + "The circle's radius is " + this.radius + '.';
   }
 }
 
