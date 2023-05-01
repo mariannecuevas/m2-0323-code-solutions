@@ -1,0 +1,260 @@
+    1  git branch javascript-custom-methods
+    2  git branch
+    3  git switch javascript-custom-methods
+    4  git status
+    5  git add javascript-custom-methods
+    6  git status
+    7  git commit -m "Completed javascript-custom-methods exercise."
+    8  git push origin javascript-custom-methods
+    9  git status
+   10  git add javascript-custom-methods/calculator.js
+   11  git status
+   12  git commit -m "Changed my code for getting the average."
+   13  git push origin javascript-custom-methods
+   14  git switch main
+   15  git pull origin main
+   16  git branch javascript-this
+   17  git branch --list
+   18  git switch javascript-this
+   19  git status
+   20  git add javascript-this
+   21  git status
+   22  git commit -m "Completed the javascript-this exercise."
+   23  git push origin javascript-this
+   24  git switch main
+   25  git pull origin main
+   26  git branch javascript-prototypes
+   27  git branch --list
+   28  git switch javascript-prototypes
+   29  git status
+   30  git add javascript-prototypes
+   31  git status
+   32  git commit -m "Completed javascript-prototypes exercise."
+   33  git push origin javascript-prototypes
+   34  git switch main
+   35  git pull origin main
+   36  git branch javascript-constructors
+   37  git branch --list
+   38  git switch javascript-constructors
+   39  git status
+   40  git add javascript-constructors
+   41  git status
+   42  git commit -m "Completed the javascript-constructors exercise."
+   43  git push origin javascript-constructors
+   44  git switch main
+   45  git switch javascript-constructors
+   46  git status
+   47  git add javascript-constructors/example-constructor.js
+   48  git status
+   49  git commit -m "Changed the code in example-constructor.js"
+   50  git push origin javascript-constructors
+   51  git switch main
+   52  git pull origin main
+   53  git pull origin main
+   54  git branch es6-const-let
+   55  git switch es6-const-let
+   56  git branch --list
+   57  git status
+   58  git add es6-const-let
+   59  git status
+   60  git commit -m "Completed es6-const-let exercise."
+   61  git push origin es6-const-let
+   62  git switch main
+   63  git pull origin main
+   64  git status
+   65  git status
+   66  git add es6-classes/circle.js
+   67  git add es6-classes/square.js
+   68  git status
+   69  git commit -m "Updated my code for both square.js and circle.js"
+   70  git push origin es6-classes
+   71  git switch main
+   72  git branch javascript-bank
+   73  git switch javascript-bank
+   74  git switch main
+   75  git pull origin main
+   76  git switch javascript-bank
+   77  git switch main
+   78  git branch es6-arrow-functions
+   79  git branch --list
+   80  git switch es6-arrow-functions
+   81  git status
+   82  git add es6-arrow-functions
+   83  git status
+   84  git commit -m "Completed es6-arrow-functions exercise."
+   85  git push origin es6-arrow-functions
+   86  git switch main
+   87  git pull origin main
+   88  git branch es6-operators
+   89  git switch es6-operators
+   90  git status
+   91  git add es6-operators
+   92  git status
+   93  git add es6-operators
+   94  git commit -m "Completed es6-operators exercise."
+   95  git push origin es6-operators
+   96  git switch main
+   97  git branch javascript-timers
+   98  git branch --list
+   99  git switch javascript-timers
+  100  git status
+  101  git add javascript-timers
+  102  git status
+  103  git commit -m "Completed javascript-timers exercise."
+  104  git push origin javascript-timers
+  105  git switch main
+  106  git switch javascript-tiemrs
+  107  git switch javascript-timers
+  108  git switch main
+  109   git switch javascript-timers
+  110  git switch main
+  111  git branch array-methods
+  112  git switch array-methods
+  113  git status
+  114  git add array-methods
+  115  git status
+  116  git commit -m "Completed array-methods exercise."
+  117  git push origin array-methods
+  118  git switch main
+  119  git pull origin main
+  120  git pull origin main
+  121  git switch javascript-bank
+  122  git switch main
+  123  git branch --list
+  124  git branch http-messages
+  125  git branch --list
+  126  git switch http-messages
+  127  cd m2-023-code-solutions
+  128  cd /workspaces/m2-0323-code-solutions
+  129  http http//example.com
+  130  http https://learning-fuze.github.io/example/
+  131  http --verbose https://learning-fuze.github.io/example/
+  132  clear
+  133  http https/example.com
+  134  clear
+  135  http https://example.com
+  136  http --verbose https://example.com
+  137  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  138  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  139  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  140  clear
+  141  http https://example.com
+  142  http --verbose https://example.com
+  143  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  144  http --body GET https://example.com > http-messages/index.html
+  145  git status
+  146  git add http-messages
+  147  git status
+  148  git commit -m "Completed http-messages exercise."
+  149  git push origin http-messages
+  150  git switch main
+  151  git pull origin main
+  152  git switch javascript-bank
+  153  git switch main
+  154  git branch javascript-ajax
+  155  git branch --list
+  156  git switch javascript-ajax
+  157  git status
+  158  git add javascript-ajax
+  159  git status
+  160  git commit -m "Completed javascript-ajax exercise."
+  161  git push origin javascript-ajax
+  162  git switch javascript-bank
+  163  git status
+  164  git add javascript-bank
+  165  git commit -m "Completed javascript-bank challenge."
+  166  git push origin javascript-bank
+  167  git switch main
+  168  git branch javascript-carousel
+  169  git switch javascript-carousel
+  170  git switch main
+  171  git pull origin main
+  172  git branch ajax-project-test
+  173  git switch ajax-project-test
+  174  npm install cors
+  175  git switch main
+  176  git branch --list
+  177  git branch --list
+  178  git pull origin main
+  179  git switch javascript-carousel
+  180  git status
+  181  git restore package.json
+  182  git restore package-lock.json
+  183  git status
+  184  git status
+  185  git switch main
+  186  git branch --list
+  187  git branch command-line-basics
+  188  git branch --list
+  189  git switch command-line-basics
+  190  cd command-line-basics
+  191  man man
+  192  man cat
+  193  man cat
+  194  cat laziness.txt
+  195  cat impatient.txt
+  196  man man
+  197  man cat
+  198  cat laziness.txt
+  199  cat impatience.txt
+  200  cd command-line-basics
+  201  man man
+  202  man cat
+  203  cat laziness.txt
+  204  cat impatience.txt
+  205  cat hubris.txt
+  206  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  207  cat three-virtues.txt
+  208  man ls
+  209  ls
+  210  ls -a
+  211  ls -F
+  212  man s
+  213  man ls
+  214  ls lfz-staff/
+  215  ls -a lfz-staff/
+  216  ls -F lfz-staff/
+  217  ls -aF lfz-staff > lfz-staff/contents.txt
+  218  cat lfz-staff/contents.txt
+  219  man pwd
+  220  pwd
+  221  pwd > i-was-here.txt
+  222  ls
+  223  cat i-was-here.txt
+  224  pwd
+  225  man pwd
+  226  man echo
+  227  echo 'Hello, World!'
+  228  echo 'Hello, World!' > hello.txt
+  229  ls
+  230  cat hello.txt
+  231  man touch
+  232  touch tag-youre-it.txt
+  233  touch snoot/boop.txt
+  234  man mkdir
+  235  mkdir parent
+  236  ls
+  237  ls parent/
+  238  man mkdir
+  239  mkdir -p parent/child/grandchild
+  240  man touch
+  241  touch parent/child/grandchild/.gitkeep
+  242  ls -a
+  243  man mv
+  244  man mv
+  245  mv pokiemans pokemon
+  246  ls
+  247  man rm
+  248  rm lol.txt
+  249  ls
+  250  rm -r kill-me/
+  251  ls
+  252  man  cp
+  253  man cp
+  254  cp and-then.txt no-and-then.txt
+  255  ls
+  256  cat and-then.txt
+  257  cat no-and-then.txt
+  258  man history
+  259  history
+  260  history > command-history.txt
