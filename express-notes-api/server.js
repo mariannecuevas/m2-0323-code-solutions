@@ -4,19 +4,20 @@ const app = express();
 
 app.use(express.json());
 
-async function readNotes() {
+async function readNotes(filepath) {
   try {
-    const data = await readFile('data.json', { encoding: 'utf8' });
+    const data = await readFile(filepath, { encoding: 'utf8' });
     const jsonData = JSON.parse(data);
     return jsonData;
   } catch (err) {
     console.error(err);
+    throw new Error('Internal Server Error');
   }
 }
 
-async function writeNotes(notesData) {
+async function writeNotes(filepath, notesData) {
   try {
-    const jsonData = await readFile('data.json', { encoding: 'utf8' });
+    const jsonData = await readFile(filepath, { encoding: 'utf8' });
     const data = JSON.parse(jsonData);
 
     data.notes = notesData.notes;
@@ -25,12 +26,13 @@ async function writeNotes(notesData) {
     await writeFile('data.json', JSON.stringify(data, null, 2), { encoding: 'utf8' });
   } catch (err) {
     console.error(err);
+    throw new Error('Internal Server Error');
   }
 }
 
 app.get('/api/notes', async (req, res) => {
   try {
-    const jsonData = await readNotes();
+    const jsonData = await readNotes('data.json');
     const notesData = jsonData.notes;
     const notesArray = [];
     for (const id in notesData) {
@@ -39,17 +41,18 @@ app.get('/api/notes', async (req, res) => {
     res.status(200).send(notesArray);
   } catch (err) {
     console.error(err);
+    res.sendStatus(500);
   }
 });
 
 app.get('/api/notes/:id', async (req, res) => {
   const id = req.params.id;
-  if (isNaN(id) || id <= 0) {
+  if (!Number.isInteger(Number(id)) || id <= 0) {
     res.status(400).json({ error: 'Id must be a positive integer' });
   }
 
   try {
-    const jsonData = await readNotes();
+    const jsonData = await readNotes('data.json');
     const notesData = jsonData.notes;
     const note = notesData[id];
 
@@ -60,6 +63,7 @@ app.get('/api/notes/:id', async (req, res) => {
     }
   } catch (err) {
     console.error(err);
+    res.sendStatus(500);
   }
 }
 );
@@ -70,7 +74,7 @@ app.post('/api/notes', async (req, res) => {
   }
 
   try {
-    const jsonData = await readNotes();
+    const jsonData = await readNotes('data.json');
     const nextId = jsonData.nextId;
 
     const newNote = {
@@ -97,7 +101,7 @@ app.delete('/api/notes/:id', async (req, res) => {
   }
 
   try {
-    const jsonData = await readNotes();
+    const jsonData = await readNotes('data.json');
     const notesData = jsonData.notes;
     const note = notesData[id];
 
@@ -123,14 +127,14 @@ app.put('/api/notes/:id', async (req, res) => {
   }
 
   try {
-    const jsonData = await readNotes();
+    const jsonData = await readNotes('data.json');
     const notesData = jsonData.notes;
     const note = notesData[id];
 
     if (note) {
       note.content = req.body.content;
       await writeNotes(jsonData);
-      res.sendStatus(204);
+      res.sendStatus(200);
     } else {
       res.status(404).json({ error: `Cannot find note with id ${id}` });
     }
