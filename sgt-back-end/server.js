@@ -32,7 +32,7 @@ app.post('/api/grades', async (req, res) => {
     const course = req.body.course;
     const score = req.body.score;
 
-    if (!name || !course || !score) {
+    if (!name || !course || score === undefined) {
       res.status(400).json({ error: 'Name, course, and score are required fields.' });
     } else if (!Number.isInteger(Number(score)) || score < 0) {
       res.status(400).json({ error: 'Score must be a non negative integer' });
@@ -64,9 +64,9 @@ app.put('/api/grades/:id', async (req, res) => {
 
     if (!Number.isInteger(Number(id)) || id <= 0) {
       res.status(400).json({ error: 'Id must be a positive integer' });
-    } else if (!name || !course || !score) {
+    } else if (!name || !course || score === undefined) {
       res.status(400).json({ error: 'Name, course, and score are required fields.' });
-    } else if (!Number.isInteger(Number(score)) || score < 0) {
+    } else if (!Number.isInteger(Number(score)) || (score < 0 && score !== 0)) {
       res.status(400).json({ error: 'Score must be a non negative integer' });
     }
 
