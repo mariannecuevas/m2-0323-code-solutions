@@ -6,7 +6,7 @@
 .carousel {
   position: relative;
   height: 500px;
-  width: 45%;
+  max-width: 750px;
   margin: 0 auto;
 }
 
@@ -16,7 +16,6 @@ img {
 }
 
 .carousel-container {
-  background-color: greenyellow;
   height: 100%;
   position: relative;
 }
@@ -28,6 +27,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .slide {
@@ -70,6 +70,7 @@ i {
 }
 
 .indicator {
+  cursor: pointer;
   border: solid black;
   border-radius: 50%;
   width: 17px;
@@ -80,4 +81,8 @@ i {
 
 .current {
   background-color: black;
+}
+
+.hidden {
+  display: none;
 }
