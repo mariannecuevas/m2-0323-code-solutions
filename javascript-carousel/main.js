@@ -1,4 +1,3 @@
-
 const slides = document.querySelectorAll('.slide');
 const indicators = document.querySelectorAll('.indicator');
 const prevBtn = document.querySelector('.btn.left');
@@ -21,42 +20,45 @@ function updateCarousel() {
 }
 
 function nextSlide() {
-  clearInterval(timer);
   currentSlideIndex++;
   if (currentSlideIndex === slides.length) {
     currentSlideIndex = 0;
   }
   updateCarousel();
-  startCarousel();
 }
 
 function prevSlide() {
-  clearInterval(timer);
   currentSlideIndex--;
   if (currentSlideIndex < 0) {
     currentSlideIndex = slides.length - 1;
   }
   updateCarousel();
-  startCarousel();
 }
 
 function goToSlide(index) {
-  clearInterval(timer);
   currentSlideIndex = index;
   updateCarousel();
-  startCarousel();
 }
 
-nextBtn.addEventListener('click', nextSlide);
-prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', () => {
+  nextSlide();
+  startCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  prevSlide();
+  startCarousel();
+});
 
 for (let i = 0; i < indicators.length; i++) {
   indicators[i].addEventListener('click', () => {
     goToSlide(i);
+    startCarousel();
   });
 }
 
 function startCarousel() {
+  clearInterval(timer);
   timer = setInterval(() => {
     nextSlide();
   }, 3000);
